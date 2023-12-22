@@ -1,6 +1,7 @@
 "use client"
 import { useReducer, useState } from 'react';
 import Logs from '../components/Logs/logs'
+import CesiumComponent from '@/components/CesiumComponent/CesiumMap';
 
 const App = () => {
   function clickHandler(event: any): import("react").MouseEventHandler<HTMLAnchorElement> | undefined {
@@ -34,8 +35,8 @@ const App = () => {
 
   return (
     <div >
-      <Logs />
-      <div onClick={() => { alert('div') }}>
+      {/* <Logs /> */}
+      {/* <div onClick={() => { alert('div') }}>
         <button type="button" onClick={() => { alert('123') }}>
           点我一下
         </button>
@@ -53,9 +54,12 @@ const App = () => {
         <button type="button" onClick={subsract}>
           -
         </button>
-      </div>
+      </div>*/}
+
+      <CesiumComponent />
+
     </div>
-  );
+  )
 }
 
 export default App
