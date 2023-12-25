@@ -1,5 +1,7 @@
+import Card from '../UI/Card/Card'
 import LogItem from './LogItem/LogItem'
 import './Logs.css'
+
 const logsData = [
     {
         id: '01',
@@ -26,9 +28,9 @@ const Logs = () => {
         id: any; date: any; desc: any; time: any
     }) => <LogItem key={item.id} date={item.date} desc={item.desc} time={item.time} />)
 
-    return <div className='logs'>
+    return <Card className='logs'>
         {logItemDate}
-    </div>
+    </Card>
 }
 
 export default Logs
