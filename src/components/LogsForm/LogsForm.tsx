@@ -3,7 +3,7 @@ import Card from '../UI/Card/Card'
 import './LogsForm.css'
 import { log } from 'console'
 
-const LogsForm = () => {
+const LogsForm = (props: { onSaveLog: any }) => {
     /*当表单项发生变化时，获取用户输入内容
     **/
     // 创建3个变量存储表单中的数据
@@ -16,6 +16,7 @@ const LogsForm = () => {
         inputDesc: '',
         inputTime: ''
     })
+
 
     // 创建响应函数，监听表单项的变化
     const dateChangeHandler = (event: any) => {
@@ -43,6 +44,9 @@ const LogsForm = () => {
             desc: formData.inputDesc,
             time: +formData.inputTime
         }
+
+        props.onSaveLog(newLog)
+
         console.log(newLog)
         // 提交表单后如何清空表单中的旧数据
         // setInputDate('')
