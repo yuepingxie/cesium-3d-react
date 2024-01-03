@@ -5,6 +5,7 @@ import Gallery from '../components/LearnState'
 import Hello from '../components/Hello'
 import Logs from '@/components/Logs/Logs'
 import LogsForm from '@/components/LogsForm/LogsForm'
+import ConfirmModal from '@/components/UI/ConfirmModal/ConfirmModal'
 
 export default function page() {
   // 数据
@@ -54,6 +55,7 @@ export default function page() {
         <br /> */}
       <LogsForm onSaveLog={saveLogHandler} />
       <Logs logsData={logsData} onDelLog={delLogByIndex} />
+      {/* <ConfirmModal /> */}
     </div>
   )
 }
