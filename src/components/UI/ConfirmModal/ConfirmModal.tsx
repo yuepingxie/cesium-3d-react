@@ -1,9 +1,9 @@
-import BackDrop from "../BackDrop/BackDrop"
+import Backdrop from "../Backdrop/Backdrop"
 import Card from "../Card/Card"
 import './confirmModal.css'
 
 const ConfirmModal = (props: any) => {
-    return <BackDrop>
+    return <Backdrop>
         <Card className="confirmModal">
             <div className="confirmText">
                 <p>{props.confirmText}</p>
@@ -13,7 +13,7 @@ const ConfirmModal = (props: any) => {
                 <button onClick={props.onCancle}>取消</button>
             </div>
         </Card>
-    </BackDrop>
+    </Backdrop>
 
 }
 export default ConfirmModal
