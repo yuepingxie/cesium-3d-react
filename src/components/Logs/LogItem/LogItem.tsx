@@ -29,7 +29,8 @@ const LogItem = (props: any) => {
 
     // 确认函数
     const okHandler = () => {
-        props.onDelLog()
+        props.onDelLog();
+        setShowConfirm(false)
     }
 
 

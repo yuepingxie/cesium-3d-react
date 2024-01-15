@@ -39,10 +39,18 @@ export default function page() {
     setLogsData([newLog, ...logsData])
   }
   // 定义一个函数，从数据中删除一条日志
-  const delLogByIndex = (index: number) => {
+  // const delLogByIndex = (index: number) => {
+  //   setLogsData(prevState => {
+  //     const newLogs = [...prevState]
+  //     newLogs.splice(index, 1);
+  //     return newLogs
+  //   });
+  // }
+
+  const delLogById = (id: string) => {
     setLogsData(prevState => {
-      const newLogs = [...prevState]
-      newLogs.splice(index, 1);
+      const newLogs = prevState.filter(item => item.id !== id)
+      // newLogs.splice(index, 1);
       return newLogs
     });
   }
@@ -54,7 +62,7 @@ export default function page() {
         <Hello />
         <br /> */}
       <LogsForm onSaveLog={saveLogHandler} />
-      <Logs logsData={logsData} onDelLog={delLogByIndex} />
+      <Logs logsData={logsData} onDelLog={delLogById} />
       {/* <ConfirmModal /> */}
     </div>
   )
